@@ -6,10 +6,11 @@ def ReturnTeoria():
         "- f sia derivabile in x0\n"
         "- x0 sia un punto di estremo relativo per f\n\n"
         "TESI: Da questa ipotesi allora f'(x0) = 0\n\n"
-        "DIMOSTRAZIONE:"
+        "DIMOSTRAZIONE:\n"
+        "-----------------------------------------------------\n\n"
 
-        "Richiesta conoscenza del Teorema di Fermat e Weierstrass\n"
         "Teorema di Rolle - Teorema fondamentale del Calcolo Differenziale\n\n"
+        "[Richiesta conoscenza del Teorema di Fermat e Weierstrass]\n"
         "IPOTESI: data una funzione f:[a,b] -> R, essa deve essere\n"
         "- Continua in [a,b]\n"
         "- derivabile in ]a,b[\n"
@@ -19,6 +20,7 @@ def ReturnTeoria():
         "ammette massimo e minimo in [a,b]. Se essi sono assunti nei punti a e b la funzione è costante ottenendo un\n"
         "ovvia conclusione. In caso contrario la tesi segue invece il Teorema di Fermat\n\n"
         "Il Teorema di Rolle assicura quindi l'esistenza di una o più tangenti orizzontali nell'intervallo ]a,b[\n\n"
+        "-----------------------------------------------------\n\n"
         "/Teoria"
     )
     return Teorema

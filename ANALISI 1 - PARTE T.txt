@@ -1,0 +1,51 @@
+ANALISI 1 - PARTE T
+
+trovati negli esami
+
+[ENUNCIARE E DIMOSTRARE TEOREMI]
+- Enunciare e dimostrare il teorema di caratterizzazione delle funzioni a derivata nulla.
+
+- Enunciare il Teorema di Weierstrass, fornendo un esempio di funzione continua su R e ivi globalmente
+  limitata che non ammette né massimo né minimo.
+
+- Enunciare e dimostrare il teorema di Fermat.
+
+- Enunciare e dimostrare il teorema di Rolle.
+
+- Enunciare e dimostrare il teorema di Cauchy.
+
+- Enunciare e dimostrare il teorema di Lagrange.
+
+- Enunciare e dimostrare il teorema di unicità del limite di successioni.
+
+- Enunciare e dimostrare un teorema di confronto per limiti di successioni
+
+- Enunciare e dimostrare il teorema di esistenza dei valori intermedi.
+
+- Dare la definizione di Maggiorante e Minorante di un Insieme
+
+[AFFERMAZIONI E CONTRO ESEMPI
+- Siano f , g : R → R due funzioni. Dire quale delle seguenti affermazioni è vera e esibire un
+  controesempio in quella falsa.
+	a) Se f + g è continua, allora f e g sono continue.
+	b) Se f e g sono continue, allora f + g è continua.
+
+- Sia (an) una successione di numeri reali. Dire quale delle seguenti affermazioni è vera e esibire un
+  controesempio in quella falsa.
+	a) Se (an) non é limitata, tende a +∞
+	b) Se (an) tende a +∞, non é limitata.
+
+- Sia f : R → R una funzione continua. Dire quale delle seguenti affermazioni è vera e esibire un
+  controesempio in quella falsa.
+	a) Se f (0) = 3 e f (2)  = −2 allora l’equazione f (x) + 1 = 0 ha almeno una soluzione positiva.
+	b) Se f (0) = 0 e f (2)  =  2   allora l’equazione f (x) + 1 = 0 ha almeno una soluzione positiva.
+
+- Sia f : R → R una funzione ovunque derivabile. Dire quale delle seguenti affermazioni è vera e esibire
+  un controesempio in quella falsa.
+	a) Se f (4) = 3 e f (2) = 2 allora l’equazione f ′(x) = 1/2 ha soluzione.
+	b) Se f (2) = 2 e f (0) = 0 allora l’equazione f ′(x) = 2 ha soluzione.
+
+- Sia f : R → R una funzione ovunque derivabile. Dire quale delle seguenti affermazioni è vera e esibire
+  un controesempio in quella falsa.
+	a) Se f (3) = f (0)    allora l’equazione f ′(x) = 0 ha una soluzione positiva.
+	b) Se f (1) = f (−1) allora l’equazione f ′(x) = 0 ha una soluzione negativa.

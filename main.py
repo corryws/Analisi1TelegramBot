@@ -3,8 +3,9 @@ from telegram import Update, InlineKeyboardButton, InlineKeyboardMarkup, BotComm
 from telegram.ext import Application, CommandHandler, MessageHandler, CallbackContext, CallbackQueryHandler
 from telegram.ext import filters
 
-from GeneratoreNumeriComplessi import ReturnComplexImage
-from GeneratoreFunzioniIRRazionali import ReturnRationalIrrationalFunctionImage
+from GenerationFunction.GeneratoreNumeriComplessi import ReturnComplexImage
+from GenerationFunction.GeneratoreFunzioniIRRazionali import ReturnRationalIrrationalFunctionImage
+from GenerationFunction.GeneratorediTeoriaInsiemi import ReturnTeoria
 
 # Imposta il logging per tracciare eventuali errori
 logging.basicConfig(format='%(asctime)s - %(name)s - %(levelname)s - %(message)s', level=logging.INFO)
@@ -35,6 +36,7 @@ def create_panel(tipo: str) -> InlineKeyboardMarkup:
         [InlineKeyboardButton("Numeri Complessi", callback_data=f"{tipo}_NumeriComplessi")],
         [InlineKeyboardButton("Successioni", callback_data=f"{tipo}_Successioni")],
         [InlineKeyboardButton("Funzioni", callback_data=f"{tipo}_Funzioni")],
+        [InlineKeyboardButton("Calcolo Differenziale", callback_data=f"{tipo}_CalcoloDifferenziale")],
         [InlineKeyboardButton("🔙 Torna al Menu", callback_data="menu_start")]  # Aggiunto pulsante per tornare al menu
     ]
     return InlineKeyboardMarkup(keyboard)
@@ -75,21 +77,25 @@ async def button(update: Update, context: CallbackContext) -> None:
     if tipo == "Esercizi":
         if argomento == "NumeriComplessi":
             # Genera l'immagine dell'esercizio sui numeri complessi
-            image_path = ReturnComplexImage()  # Supponendo che ritorni il percorso del file
+            image_path = ReturnComplexImage()
             # Invia l'immagine all'utente
             await query.message.reply_photo(photo=open(image_path, 'rb'))
         if argomento == "Funzioni":
             # Genera l'immagine dell'esercizio sui numeri complessi
-            image_path = ReturnRationalIrrationalFunctionImage()  # Supponendo che ritorni il percorso del file
+            image_path = ReturnRationalIrrationalFunctionImage()
             # Invia l'immagine all'utente
             await query.message.reply_photo(photo=open(image_path, 'rb'))
         else:
-            response = f"Generazione esercizio sull'argomento: {argomento}."
+            response = f"Esercizio sull'argomento: {argomento}. Non Ancora disponibile e/o non esistente."
             await query.edit_message_text(text=response)
 
     elif tipo == "Teoria":
-        response = f"Teoria sull'argomento: {argomento}."
-        await query.edit_message_text(text=response)
+        if argomento == "CalcoloDifferenziale":
+            # Invia il testo della teoria dell'insieme
+            await query.edit_message_text(text=ReturnTeoria())
+        else: 
+            response = f"Teoria sull'argomento: {argomento}. Non Ancora disponibile e/o non esistente."
+            await query.edit_message_text(text=response)
 
 # Funzione che gestisce i messaggi non riconosciuti
 async def echo(update: Update, context: CallbackContext) -> None:

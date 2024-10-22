@@ -119,7 +119,7 @@ async def set_bot_commands(application: Application) -> None:
 
 def main() -> None:
     # Inserisci qui il token del bot
-    TOKEN = 'inserttokenhere'
+    TOKEN = '7353939632:AAExwmh0z6TPTLNE9BrIYdW5sjXI2TZIXfI'
 
     # Crea l'application e passa il token del bot
     application = Application.builder().token(TOKEN).build()

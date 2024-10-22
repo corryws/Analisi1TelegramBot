@@ -5,7 +5,8 @@ from telegram.ext import filters
 
 from GenerationFunction.GeneratoreNumeriComplessi import ReturnComplexImage
 from GenerationFunction.GeneratoreFunzioniIRRazionali import ReturnRationalIrrationalFunctionImage
-from GenerationFunction.GeneratorediTeoriaInsiemi import ReturnTeoria
+from GenerationFunction.GeneratorediTeoriaInsiemi import ReturnTeoriaDifferenziale
+from GenerationFunction.GeneratorediTeoriaInsiemi import ReturnTeoriaFunzioniContinue
 
 # Imposta il logging per tracciare eventuali errori
 logging.basicConfig(format='%(asctime)s - %(name)s - %(levelname)s - %(message)s', level=logging.INFO)
@@ -92,9 +93,12 @@ async def button(update: Update, context: CallbackContext) -> None:
     elif tipo == "Teoria":
         if argomento == "CalcoloDifferenziale":
             # Invia il testo della teoria dell'insieme
-            await query.edit_message_text(text=ReturnTeoria())
+            await query.edit_message_text(text=ReturnTeoriaDifferenziale())
+        elif argomento == "Funzioni":
+            # Invia il testo della teoria dell'insieme
+            await query.edit_message_text(text=ReturnTeoriaFunzioniContinue())
         else: 
-            response = f"Teoria sull'argomento: {argomento}. Non Ancora disponibile e/o non esistente."
+            response = f"Teoria sull'argomento: {argomento}. Non Ancora disponibile e/o non esistente.\n /Teoria"
             await query.edit_message_text(text=response)
 
 # Funzione che gestisce i messaggi non riconosciuti
